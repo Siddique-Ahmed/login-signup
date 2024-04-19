@@ -23,9 +23,11 @@
     if((userEmail1 == userEmail && userPassword1 == userPassword) || userEmail1 === "" && userPassword1 === ""){
       alert("You are logged In");
       email.value = "";
-      password.value = ""
+      password.value = "";
     }else{
-      alert("please enter valid email or password")
+      alert("please enter valid email or password");
+      email.value = "";
+      password.value = "";
     };
 
   });
