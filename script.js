@@ -20,12 +20,16 @@
     let userEmail1 = email.value.toLowerCase();
     let userPassword1 = password.value;
 
-    if((userEmail1 == userEmail && userPassword1 == userPassword) || userEmail1 === "" && userPassword1 === ""){
+    if( userEmail1 == userEmail && userPassword1 == userPassword){
       alert("You are logged In");
       email.value = "";
       password.value = "";
+      localStorage.setItem("userEmail1", userEmail1);
+      localStorage.setItem("userPassword1", userPassword1);
+    }else if(userEmail1 == "" && userPassword1 == ""){
+      alert("please fill the input");
     }else{
-      alert("please enter valid email or password");
+      alert("Please enter the correct password");
       email.value = "";
       password.value = "";
     };
